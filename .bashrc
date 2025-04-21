@@ -6,7 +6,7 @@ export PATH=/var/lib/flatpak/exports/bin:$PATH
 export PATH=~/.local/share/flatpak/exports/bin:$PATH
 source /usr/share/bash-completion/completions/flatpak
 alias ls='ls --color'
-alias ll='ls --color -alshr' 
+alias ll='ls --color -lshr' 
 alias yt-dlp='yt-dlp --cookies-from-browser firefox -o "%(title).200s.%(ext)s"'
 alias yt-music='yt-dlp --live-from-start -o "%(title).200s.%(ext)s" --ignore-errors --continue --no-overwrites -x -f bestaudio --add-metadata --embed-thumbnail'
 
