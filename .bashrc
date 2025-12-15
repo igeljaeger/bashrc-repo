@@ -3,17 +3,20 @@ source /etc/bash.bashrc
 fastfetch
 export LANG="en_US.UTF-8"
 export LC_ALL="C.UTF-8"
+alias a='ani-cli'
 alias ls='ls --color'
 alias ll='ls --color -lshr' 
-alias yt-dlp='yt-dlp --cookies-from-browser firefox:~/.var/app/org.mozilla.firefox/.mozilla/firefox/ -o "%(title).200s.%(ext)s"'
-alias yt-music='yt-dlp --live-from-start --ignore-errors --continue --no-overwrites -x -f bestaudio --add-metadata --embed-thumbnail'
+#alias yt-dlp='yt-dlp --cookies-from-browser firefox:~/.var/app/org.mozilla.firefox/.mozilla/firefox/ -o "%(title).200s.%(ext)s"'
+alias yt-dlp='yt-dlp --cookies-from-browser chromium:~/.var/app/com.brave.Browser/ -o "%(title).200s.%(ext)s"'
+alias yt-music='yt-dlp --live-from-start --ignore-errors --continue --no-overwrites -x --audio-format mp3 --audio-quality 0 --extract-audio --add-metadata --embed-thumbnail'
 alias cdt='cd /media/igel/ext4HDD8TB/Downloads/qbittorrent/Music/teto/'
 alias cdu='cd /media/igel/ext4HDD8TB/Downloads/qbittorrent/Music/unique_songs'
 alias kderestart='killall plasmashell && kstart plasmashell'
-alias flatpak='flatpak --user'
 alias vlc='flatpak run org.videolan.VLC'
 alias cdm='cd /media/igel/ext4HDD8TB/Downloads/qbittorrent/Music/'
-alias update='chmod +x /home/igel/.local/bin/update && /home/igel/.local/bin/update'
+alias update='chmod +x $HOME/.local/bin/update && $HOME/.local/bin/update && sleep 5 && sudo shutdown now'
+alias libreoffice='flatpak run org.libreoffice.LibreOffice'
+alias convert='magick convert'
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
